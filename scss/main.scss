@@ -1,0 +1,114 @@
+@import "reset";
+@import "mixins";
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+p, h1{
+    font-weight: bold;
+}
+
+span{
+    font-weight: normal;
+}
+
+main{
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    height: 100vh;
+    align-items: center;
+    @include mQ(768px){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.profile-info{
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.profile-info{
+    h1{
+        font-size: 2.5em;
+        margin: 1em 0;
+    }
+    .info{
+        p{
+            margin: 1em 0;
+            font-size: 1.25em;
+        }
+
+        #address{
+            min-width: 160px;
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+.profile-form{
+    margin: 0 auto;
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 1em 0.5em;
+        input{
+            margin: 1em 0;
+            padding: 1em;
+            font-size: 1em;
+            font-family: 'Roboto', sans-serif;
+            border: 1px solid #000;
+            border-radius: 0.25em;
+        }
+        .bday-blood{
+            display: flex;
+            justify-content: space-between;
+        }
+        #inputBirthday{
+            width: 50%;
+        }
+        #inputBloodGroup{
+            padding:0.7em 0.5em;
+            width: 30%;
+        }
+    }
+}
+
+button{
+    color: #fff;
+    background-color: #595959;
+    border: none;
+    border-radius: 0.25em;
+    padding: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 1.5em 0;
+    width: 100%;
+    &:active{
+        background-color: #fff;
+        border:1px solid #595959;
+        color: #000;
+    }
+}
+
+.active{
+    border:1px solid #000000;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.disabled{
+    display: none;
+}
+
+.visuallyhidden { 
+    visibility: hidden;
+  }
